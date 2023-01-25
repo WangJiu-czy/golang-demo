@@ -3,5 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("hello go")
+	req := []byte{0x05, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
+	fmt.Println("===", string(req), "===")
+	fmt.Println([]byte(" "))
 }
