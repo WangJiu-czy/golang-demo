@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"flag"
+	"fmt"
+)
 
 func main() {
-	req := []byte{0x05, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
-	fmt.Println("===", string(req), "===")
-	fmt.Println([]byte(" "))
+	showVersion := flag.Bool("v", false, "show version")
+	flag.Parse()
+	if *showVersion {
+		fmt.Println("66", *showVersion)
+	}
+	fmt.Println("11", showVersion)
 }
