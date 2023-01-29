@@ -102,3 +102,5 @@ func VerifySocket5(pr string) bool {
 	}
 	return false
 }
+
+//TODO:还没好

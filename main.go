@@ -1,15 +1,15 @@
 package main
 
 import (
-	"flag"
 	"fmt"
+
+	"os/exec"
 )
 
 func main() {
-	showVersion := flag.Bool("v", false, "show version")
-	flag.Parse()
-	if *showVersion {
-		fmt.Println("66", *showVersion)
+	s, err := exec.LookPath("go")
+	if err != nil {
+
 	}
-	fmt.Println("11", showVersion)
+	fmt.Println(s)
 }
