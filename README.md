@@ -32,4 +32,4 @@
 - [git-sync](https://github.com/WangJiu-czy/golang-demo/tree/main/git-sync)
   >自动备份git仓库,只需要go和git环境,便可以自动定时备份项目,并推送到远程仓库
   > 
-  > 详情请看[REAMDE.md](https://github.com/WangJiu-czy/golang-demo/tree/main/git-sync/REAMDE.md)
+  > 详情请看[REAMDE.md](https://github.com/WangJiu-czy/golang-demo/blob/main/git-sync/README.md)
