@@ -8,7 +8,7 @@ config:
   #监听IP
   ip: 0.0.0.0
   #webApi监听端口
-  port: 8080
+  port: 8081
   #http隧道代理端口
   httpTunnelPort: 8111
   #socket隧道代理端口

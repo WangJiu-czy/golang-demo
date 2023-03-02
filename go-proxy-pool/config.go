@@ -28,14 +28,13 @@ type config struct {
 	VerifyTime       int    `yaml:"verifyTime" json:"verifyTime"`
 	ThreadNum        int    `yaml:"threadNum" json:"threadNum"`
 }
-
 type Spider struct {
 	Name     string            `yaml:"name" json:"name"`
 	Method   string            `yaml:"method" json:"method"`
 	Interval int               `yaml:"interval" json:"interval"`
 	Body     string            `yaml:"body" json:"body"`
 	ProxyIs  bool              `yaml:"proxy" json:"proxy"`
-	Header   map[string]string `yaml:"headers" json:"headers"`
+	Headers  map[string]string `yaml:"headers" json:"headers"`
 	Urls     string            `yaml:"urls" json:"urls"`
 	Ip       string            `yaml:"ip" json:"ip"`
 	Port     string            `yaml:"port" json:"port"`
@@ -48,6 +47,7 @@ type SpiderFile struct {
 	Name string `yaml:"name" json:"name"`
 	Path string `yaml:"path" json:"path"`
 }
+
 type Proxy struct {
 	Host string `yaml:"host" json:"host"`
 	Port string `yaml:"port" json:"port"`
@@ -68,8 +68,9 @@ type ProxyIp struct {
 	Source     string //代理源
 }
 
-//ip去重
-func uniqueIP(arr []ProxyIp) (pr []ProxyIp) {
+// 数组去重
+func uniquePI(arr []ProxyIp) []ProxyIp {
+	var pr []ProxyIp
 	for _, v := range arr {
 		is := true
 		for _, vv := range pr {
@@ -84,26 +85,28 @@ func uniqueIP(arr []ProxyIp) (pr []ProxyIp) {
 	return pr
 }
 
-//读取配置文件
+// 读取配置文件
 func GetConfigData() {
+	//导入配置文件
 	yamlFile, err := os.ReadFile("config.yml")
 	if err != nil {
-		log.Println("配置文件打开错误: " + err.Error())
+		log.Println("配置文件打开错误：" + err.Error())
 		err.Error()
 		return
 	}
+	//将配置文件读取到结构体中
 	err = yaml.Unmarshal(yamlFile, &conf)
 	if err != nil {
-		log.Println("配置文件解析错误: " + err.Error())
+		log.Println("配置文件解析错误：" + err.Error())
 		err.Error()
 		return
 	}
+	//导入代理缓存
 	file, err := os.OpenFile("data.json", os.O_RDWR|os.O_CREATE, 0644)
 	if err != nil {
-		log.Println("代理json解析错误: " + err.Error())
+		log.Println("代理json文件打开错误：" + err.Error())
 		err.Error()
 		return
-
 	}
 	defer file.Close()
 	all, err := io.ReadAll(file)
@@ -119,6 +122,7 @@ func GetConfigData() {
 		log.Println("代理json解析错误：" + err.Error())
 		return
 	}
+
 }
 
 // 处理Headers配置
