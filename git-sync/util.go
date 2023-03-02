@@ -15,7 +15,7 @@ type Config struct {
 	//将在提交title前面添加前缀, 默认:"backup: %date%"
 	CommitFormat string `json:"commit_format"`
 
-	//指定日期格式，默认为："2023-01-01 15:15:15"
+	//指定日期格式，默认为："2006-01-02 15:04:05"
 	CommitDate string `json:"commit_date"`
 	//列出提交主体中受提交影响的文件名，默认值：true
 	AddAffectedFiles bool `json:"add_affected_files"`
@@ -55,7 +55,7 @@ Loads and parses config from:
 func getConfig() Config {
 	fallbackConf := Config{
 		CommitFormat:     "backup:%date%",
-		CommitDate:       "2023-01-01 15:15:15",
+		CommitDate:       "2006-01-02 15:04:05",
 		AddAffectedFiles: true,
 		BackupInterval:   300,
 		CommitCommand:    "git commit -m",
