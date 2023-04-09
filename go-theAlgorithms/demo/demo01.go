@@ -56,3 +56,47 @@ func process() {
 	number <- true
 	wait.Wait()
 }
+
+type point struct {
+	x int
+	y int
+}
+
+// 判断点是否在多边形的内部
+func rayCasting(p point, poly []point) bool {
+	var (
+		px = p.x
+		py = p.y
+	)
+	var flag = false
+	j := len(poly) - 1
+	for i, pv := range poly {
+		var (
+			sx = pv.x
+			sy = pv.x
+			tx = poly[j].x
+			ty = poly[j].y
+		)
+		j = i
+
+		if (sx == px && sy == py) || (tx == px && ty == py) {
+			return true
+		}
+
+		if (sy < py && ty >= py) || (sy >= py && ty < py) {
+			//斜率*高=底边   +sx=距离x轴0点的长度
+			x := sx + (py-sy)*(tx-sx)/(ty-sy)
+
+			//此时p点的多边形的边上
+			if x == px {
+				return true
+			}
+			//穿过的次数如果是偶数-->在外面     奇数-->在里面
+			if x > px {
+				flag = !flag
+			}
+		}
+	}
+	return flag
+
+}

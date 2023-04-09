@@ -1,7 +1,7 @@
 package main
 
 import (
-	"day2-client/codec"
+	"day3-service/codec"
 	"encoding/json"
 	"errors"
 	"fmt"

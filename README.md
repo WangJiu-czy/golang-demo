@@ -4,7 +4,15 @@
 > 学习过程中，写的一些项目
 
 ---
+#### 常用
+- [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
+  >后端开发中常用的一些函数及功能实现,包括编解码,IOC等
 
+#### 练习
+- [7-days-rpc](https://github.com/WangJiu-czy/golang-demo/tree/main/7-days/GeeRPC)
+ >七天实现一个简易的rpc框架
+
+---
 #### 工具
 - [go-proxy-pool](https://github.com/WangJiu-czy/golang-demo/tree/main/go-proxy-pool)
   >无外部依赖的ip代理池
@@ -18,20 +26,20 @@
   > 详情请看[REAMDE.md](https://github.com/WangJiu-czy/golang-demo/blob/main/git-sync/README.md)
 
 ---
-#### WEB
+#### 服务
 - [go-web-server](https://github.com/WangJiu-czy/golang-demo/tree/main/go-web-server)
-  >使用原生的net/http编写一个简单的web服务(入门)
-
-
+  >使用原生的net/http编写一个简单的web服务
+  
 - [go-gin-CRUD](https://github.com/WangJiu-czy/golang-demo/tree/main/go-gin-CRUD) 
   >在Go中使用Gin框架,使用REST API风格的请求,进行CRUD操作
 
 - [jwt](https://github.com/WangJiu-czy/golang-demo/tree/main/jwt)
   >学习jwt的简单使用
+
+- [loadbalancer](https://github.com/WangJiu-czy/golang-demo/tree/main/loadbalancer)
+  >使用go原生库实现的负载均衡器
 ---
 
-#### 算法
-- [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
-   >该存储库是各种算法的开源实现的集合, 学习使用
+
 
 

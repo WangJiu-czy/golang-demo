@@ -1,7 +1,7 @@
 package main
 
 import (
-	"day1-codec/codec"
+	"day2-client/codec"
 	"encoding/json"
 	"fmt"
 	"io"
