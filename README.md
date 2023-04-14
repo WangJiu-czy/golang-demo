@@ -12,6 +12,8 @@
 - [7-days-rpc](https://github.com/WangJiu-czy/golang-demo/tree/main/7-days/GeeRPC)
  >七天实现一个简易的rpc框架
 
+- [设计模式](https://github.com/WangJiu-czy/golang-demo/tree/main/design) 
+ >使用go实现设计模式
 ---
 #### 工具
 - [go-proxy-pool](https://github.com/WangJiu-czy/golang-demo/tree/main/go-proxy-pool)
