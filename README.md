@@ -19,7 +19,7 @@
 - [go-proxy-pool](https://github.com/WangJiu-czy/golang-demo/tree/main/go-proxy-pool)
   >无外部依赖的ip代理池
 
-- [serve](https://github.com/WangJiu-czy/golang-demo/tree/main/scanPort)
+- [scanPort](https://github.com/WangJiu-czy/golang-demo/tree/main/scanPort)
   >端口扫描工具,扫描查看哪些端口开放
 
 - [git-sync](https://github.com/WangJiu-czy/golang-demo/tree/main/git-sync)
