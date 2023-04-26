@@ -7,6 +7,10 @@
 #### 常用
 - [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
   >后端开发中常用的一些函数及功能实现,包括编解码,IOC等
+
+- [utils](https://github.com/WangJiu-czy/golang-demo/tree/main/utils)
+  >web开发工具包
+
 ---
 #### 练习
 - [7-days-rpc](https://github.com/WangJiu-czy/golang-demo/tree/main/7-days/GeeRPC)
