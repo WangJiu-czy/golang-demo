@@ -1,0 +1,83 @@
+replies:
+  #文本类型的回复
+  - type: text
+    rules:
+      - 在吗
+    content: 我是微信公众号：MIKE小助手，欢迎来撩！
+  #链接类型回复
+  - type: url
+    rules:
+      - 壁纸
+      - 二次元
+    request:
+      #图片
+      response_type: image
+      url: https://tenapi.cn/v2/acg
+  - type: url
+    rules:
+      - 舔狗日记
+      - 舔狗
+    request:
+      #纯文本
+      response_type: text
+      url: https://api.oick.cn/dog/api.php
+  - type: url
+      - 股票 (.*)
+    request:
+      #纯文本
+      response_type: text
+      url: https://zyzcfa.com:444/api/stocks?keyword={{1}}
+  - type: url
+    rules:
+      - 蓝奏云 (.*) (.*)
+      - 蓝奏云 (.*)
+      - 蓝奏云 (.*)密码:(.*)
+    request:
+      #纯文本
+      response_type: json
+      url: http://yingy.20wl.co/Api/php/LanZous.php?url={{1}}&pwd={{2}}
+      get: data.url
+  - type: url
+    rules:
+      - 游戏
+      - 开始游戏
+    request:
+      #纯文本
+      response_type: text
+      url: http://hm.suol.cc/API/game_gs.php?msg=开始游戏
+  - type: url
+    rules:
+      - 答 (.*)
+      - 答(.*)
+    request:
+      #纯文本
+      response_type: text
+      url: http://hm.suol.cc/API/game_gs.php?msg=答{{1}}
+  - type: url
+    rules:
+      - 提示
+    request:
+      #纯文本
+      response_type: text
+      url: http://hm.suol.cc/API/game_gs.php?msg=提示
+  - type: url
+    rules:
+      - ^查字\s*(\S*)$
+    replace:
+      -
+        - <br>
+
+        - "\n"
+    request:
+      response_type: template
+      url: https://api.tianapi.com/txapi/xhzd/index?key=19eea766886493ecd04e770d0c2b56f9&word={{1}}
+      template: "汉字：gjson(newslist.[0].hanzi)\n读音：gjson(newslist.[0].pyyb)\n解释：gjson(newslist.[0].content)\n拓展：gjson(newslist.[0].explain)"
+  # - type: url
+  #   rules:
+  #     - .*
+  #   request:
+  #       #纯文本
+  #       response_type: json
+  #       url: https://api.ixiaowai.cn/tgrj/index.php
+  #       get: data.msg
+

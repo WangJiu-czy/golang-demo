@@ -1,0 +1,15 @@
+version: '3'
+services:
+  WangJiu:
+    container_name: WangJiu
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wangjiu:latest
+    restart: always
+    tty: true
+    volumes:
+      - './conf/config.yaml:/app/conf/config.yaml'
+      - './develop/replies:/app/develop/replies'
+      - './data:/app/data'
+      - './logs:/app/logs'

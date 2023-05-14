@@ -7,11 +7,7 @@
 
 
 #### 常用
-- [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
-```text
-后端开发中常用的一些函数及功能实现,
-包括编解码,IOC等
-```
+
 
 - [utils](https://github.com/WangJiu-czy/golang-demo/tree/main/utils)
  ```text
@@ -21,7 +17,7 @@ web开发工具包
 
 
 ---
-#### 工具
+#### 已完成项目
 - [go-proxy-pool](https://github.com/WangJiu-czy/golang-demo/tree/main/go-proxy-pool)
   ```text
   无外部依赖的ip代理池
@@ -37,12 +33,18 @@ web开发工具包
   自动备份git仓库,只需要go和git环境,
   便可以自动定时备份项目,并推送到远程仓库
   ```
+- [WangJiuBot](https://github.com/WangJiu-czy/golang-demo/tree/main/WangJiuBot)
+  ```text
+  对话机器人框架,通过自定义规则文件,js脚本,实现对话回复功能
+  ```
 ---
 #### 练习
-- [7-days-rpc](https://github.com/WangJiu-czy/golang-demo/tree/main/7-days/GeeRPC)
- ```text
-七天实现一个简易的rpc框架
+- [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
+```text
+后端开发中常用的一些函数及功能实现,
+包括编解码,IOC等
 ```
+
 - [iris_examples](https://github.com/WangJiu-czy/golang-demo/tree/main/iris_examples)
 ```text
   iris框架使用例子
