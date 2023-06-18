@@ -40,33 +40,18 @@ web开发工具包
 ---
 #### 练习
 - [go-theAlgorithms](https://github.com/WangJiu-czy/golang-demo/tree/main/go-theAlgorithms)
-```text
-后端开发中常用的一些函数及功能实现,
-包括编解码,IOC等
-```
+```后端开发中常用的一些函数及功能实现```
 
 - [iris_examples](https://github.com/WangJiu-czy/golang-demo/tree/main/iris_examples)
-```text
-  iris框架使用例子
-  ```
+```iris框架使用例子```
 - [设计模式](https://github.com/WangJiu-czy/golang-demo/tree/main/design)
-```text
-使用go实现设计模式
-```
-
----
-#### 服务
+```使用go实现设计模式```
 
 - [go-web-server](https://github.com/WangJiu-czy/golang-demo/tree/main/go-web-server)
-  ```text
-  使用原生的net/http编写一个简单的web服务
-  ```
+  ```使用原生的net/http编写一个简单的web服务```
   
 - [go-gin-CRUD](https://github.com/WangJiu-czy/golang-demo/tree/main/go-gin-CRUD) 
-  ```text
-  在Go中使用Gin框架,
-  使用REST API风格的请求,进行CRUD操作
-  ```
+  ```用REST API风格的请求,进行CRUD操作```
 - [serve](https://github.com/WangJiu-czy/golang-demo/tree/main/serve)
   ```简单的使用原始http,挂载本地目录```
 - [jwt](https://github.com/WangJiu-czy/golang-demo/tree/main/jwt)
